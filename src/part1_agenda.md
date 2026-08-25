@@ -47,6 +47,18 @@ Part 1 is the **conceptual and foundational** half of the workshop. It should gi
 - NetworkX ↔ GeoDataFrame conversions (`c2g.nx_to_gdf`)
 - Edge attributes: length, travel time
 
+#### 2.1b Street networks from Overture Maps (participant exercise)
+- "Choose your own city": the same centrality analysis on a place the attendee names
+- `c2g.load_overture_data(place_name=...)` → `c2g.process_overture_segments()` →
+  `c2g.segments_to_graph()` → `c2g.filter_graph_by_distance()` → `c2g.gdf_to_nx()`
+- Contrast with OSMnx: Overture ships geometries under one global schema, so topology
+  has to be built (split at connectors, snap endpoints); OSMnx ships a finished
+  directed multigraph
+- Trimmed to a 1 km network radius so the analysis stays workshop-sized
+- Fallback route in the same section: `ox.geocode()` + `ox.graph_from_point()` +
+  `ox.project_graph()` produces the same `my_nodes` / `my_edges`, for attendees whose
+  Overture download fails at the venue (~10 s instead of ~40 s)
+
 #### 2.2 Contiguity graphs (H3 neighbours)
 - Queen contiguity: adjacent hexagons share an edge or vertex
 - `c2g.contiguity_graph()` — fast alternative to street routing
@@ -104,7 +116,7 @@ Area selection → H3 tessellation → Overture data fetch
      → Interactive map export
 ```
 
-- Show the pre-computed clustering result image ([img/clustering_result.png](file:///Users/yutasato/Projects/Liverpool/city2graph-workshop/img/clustering_result.png))
+- Show the pre-computed clustering result image ([img/clustering_result.png](../img/clustering_result.png))
 - Discuss interpretation: what do the clusters mean urbanistically?
 - Preview: in Part 2 you will run this for **your own city**
 

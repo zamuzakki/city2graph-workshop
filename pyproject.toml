@@ -3,9 +3,9 @@ name = "city2graph-workshop"
 version = "0.1.0"
 description = "Hands-On GeoAI: From Geospatial Data to Graph Neural Networks with City2Graph"
 readme = "README.md"
-requires-python = ">=3.11,<3.14"
+requires-python = ">=3.12,<3.14"
 dependencies = [
-    "city2graph",
+    "city2graph==1.0.0",
     "contextily>=1.7.0",
     "folium>=0.20.0",
     "geopandas",

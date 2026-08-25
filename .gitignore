@@ -39,6 +39,7 @@ interactive_map.html
 # Keep selected workshop notebook
 !notebooks/
 notebooks/*
+!notebooks/part1_networks.ipynb
 !notebooks/part2_geoai.ipynb
 
 # Keep selected image
