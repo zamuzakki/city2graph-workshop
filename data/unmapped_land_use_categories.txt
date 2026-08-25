@@ -1,0 +1,14 @@
+agriculture
+campground
+developed
+education
+entertainment
+golf
+horticulture
+landfill
+managed
+medical
+protected
+recreation
+resource_extraction
+transportation
